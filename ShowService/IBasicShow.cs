@@ -9,5 +9,7 @@ namespace ShowService
 {
     public interface IBasicShow:IDisposable
     {
+        void Working();
+        event Action ShowFire;
     }
 }

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace IShowModel
-{
-    public interface IPay
     {
-        void Fee();
+    public interface IPay
+        {
+         void Fee();
+        }
     }
-}

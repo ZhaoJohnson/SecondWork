@@ -15,21 +15,20 @@ namespace SecondWorkMainProject
         {
             try
             {
-                BasicModel Show = new WestFactionModel();
-                EastShow<EastFactionModel> show = new EastShow<EastFactionModel>();
-                show.HumanSound();
-                Console.ReadKey();
                 IBasicShow show1 = new EastShow<EastFactionModel>();
+                show1.Working();
+                show1.ShowFire += () => Console.WriteLine("张三说：大家快来看表演啊！！！！");
+                IPay EastPay= new EastShow<EastFactionModel>();
+                EastPay.Fee();
                 IBasicShow show2 = CreateFactory(EnumModel.Faction.EastFaction);
+                Console.ReadKey();
             }
             catch (Exception ex)
             {
-                throw ex.InnerException;
+                Console.WriteLine(ex.Message);
+                throw ex;
             }
-           
-            
         }
-
 
         static IBasicShow CreateFactory(EnumModel.Faction enumstring)
         {
@@ -38,13 +37,15 @@ namespace SecondWorkMainProject
                 case EnumModel.Faction.EastFaction:
                     return new EastShow<EastFactionModel>();
                 case EnumModel.Faction.NorthFaction:
-                    return new EastShow<EastFactionModel>();
+                    return new NorthShow<NorthFactionModel>();
                 case EnumModel.Faction.SouthFaction:
-                    return new EastShow<EastFactionModel>();
+                    return new SouthShow<SouthFactionModel>();
                 case EnumModel.Faction.WestFaction:
-                    return new EastShow<EastFactionModel>();
+                    return new WestShow<WestFactionModel>();
             }
             throw  new Exception("请检查参数是否配置正确");
         }
+
+        
     }
 }

@@ -8,15 +8,15 @@ using ShowModel;
 
 namespace ShowService
 {
-    public abstract class BasicShow<TModel>: IBasicShow,IPay where TModel : IBasicModel
+    public abstract class BasicShow<TModel> : IBasicShow where TModel : IBasicModel
     {
         /// <summary>
         /// 开场
         /// </summary>
         public void InitialShow()
         {
-            Type type = typeof (TModel);
-            Console.WriteLine("接下来我们由请：{0}来为大家表演",type.Name);
+            Type type = typeof(TModel);
+            Console.WriteLine("接下来我们由请：{0}来为大家表演", type.Name);
         }
         /// <summary>
         /// 狗狗叫
@@ -45,15 +45,21 @@ namespace ShowService
         {
             Console.WriteLine("See U Again!");
         }
-
-        public void Fee()
+        public abstract event Action ShowFire;
+        public abstract void SetTemperature( int temperature );
+       
+        public virtual void Working()
         {
-            throw new NotImplementedException();
+            InitialShow();
+            Prologue();
+            Bark();
+            HumanSound();
+            Wind();
+            ConcludingRemarks();
         }
-
         public void Dispose()
         {
-            throw new NotImplementedException();
+         
         }
     }
 }

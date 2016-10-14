@@ -10,6 +10,8 @@ namespace ShowService
     public class SouthShow<Tmodel> : BasicShow<Tmodel>
         where Tmodel : BasicModel, new()
     {
+        public override event Action ShowFire;
+
         public override void Bark()
         {
             throw new NotImplementedException();
@@ -18,6 +20,17 @@ namespace ShowService
         public override void HumanSound()
         {
             throw new NotImplementedException();
+        }
+
+        public override void SetTemperature( int temperature )
+        {
+            if (ShowFire == null)
+                return;
+
+            if (temperature == 200)
+                Console.WriteLine("东派表演的掌声轰鸣，热情值上涨{0}", temperature);
+            if (temperature >= 400)
+                ShowFire.Invoke();
         }
 
         public override void Wind()
