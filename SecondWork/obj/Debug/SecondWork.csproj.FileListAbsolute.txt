@@ -1,0 +1,10 @@
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\SecondWork.exe.config
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\SecondWork.exe
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\SecondWork.pdb
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\WorkModel.dll
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\WorkModel.pdb
+D:\test\HomeWork\SecondWork\SecondWork\obj\Debug\SecondWork.csprojResolveAssemblyReference.cache
+D:\test\HomeWork\SecondWork\SecondWork\obj\Debug\SecondWork.exe
+D:\test\HomeWork\SecondWork\SecondWork\obj\Debug\SecondWork.pdb
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\WorkService.dll
+D:\test\HomeWork\SecondWork\SecondWork\bin\Debug\WorkService.pdb

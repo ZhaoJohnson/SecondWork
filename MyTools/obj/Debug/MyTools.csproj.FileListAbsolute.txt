@@ -1,0 +1,5 @@
+D:\test\HomeWork\SecondWork\MyTools\bin\Debug\MyTools.dll
+D:\test\HomeWork\SecondWork\MyTools\bin\Debug\MyTools.pdb
+D:\test\HomeWork\SecondWork\MyTools\obj\Debug\MyTools.csprojResolveAssemblyReference.cache
+D:\test\HomeWork\SecondWork\MyTools\obj\Debug\MyTools.dll
+D:\test\HomeWork\SecondWork\MyTools\obj\Debug\MyTools.pdb

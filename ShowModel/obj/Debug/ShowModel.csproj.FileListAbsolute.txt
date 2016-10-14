@@ -1,0 +1,9 @@
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\ShowModel.dll
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\ShowModel.pdb
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\IShowModel.dll
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\MyTools.dll
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\IShowModel.pdb
+D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\MyTools.pdb
+D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.csprojResolveAssemblyReference.cache
+D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.dll
+D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.pdb
