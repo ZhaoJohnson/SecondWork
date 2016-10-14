@@ -12,3 +12,17 @@ D:\test\HomeWork\SecondWork\SecondWorkMainProject\bin\Debug\ShowService.pdb
 D:\test\HomeWork\SecondWork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.csprojResolveAssemblyReference.cache
 D:\test\HomeWork\SecondWork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.exe
 D:\test\HomeWork\SecondWork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.pdb
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\SecondWorkMainProject.exe.config
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\SecondWorkMainProject.exe
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\SecondWorkMainProject.pdb
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\IShowModel.dll
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\MyTools.dll
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\ShowModel.dll
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\ShowService.dll
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\IShowModel.pdb
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\MyTools.pdb
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\ShowModel.pdb
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\ShowService.pdb
+D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.csprojResolveAssemblyReference.cache
+D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.exe
+D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.pdb
