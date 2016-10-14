@@ -13,27 +13,36 @@ namespace SecondWorkMainProject
     {
         static void Main(string[] args)
         {
-            BasicModel Show = new WestFactionModel();
-            EastShow<EastFactionModel> show=new EastShow<EastFactionModel>();
-            show.HumanSound();
-            Console.ReadKey();
-            IBasicShow show1=new EastShow<EastFactionModel>();
+            try
+            {
+                BasicModel Show = new WestFactionModel();
+                EastShow<EastFactionModel> show = new EastShow<EastFactionModel>();
+                show.HumanSound();
+                Console.ReadKey();
+                IBasicShow show1 = new EastShow<EastFactionModel>();
+                IBasicShow show2 = CreateFactory(EnumModel.Faction.EastFaction);
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+           
             
         }
 
 
-        static IBasicModel CreateFactory(EnumModel.Faction enumstring)
+        static IBasicShow CreateFactory(EnumModel.Faction enumstring)
         {
             switch (enumstring)
             {
                 case EnumModel.Faction.EastFaction:
-                    return new WestFactionModel();
+                    return new EastShow<EastFactionModel>();
                 case EnumModel.Faction.NorthFaction:
-                    return new WestFactionModel();
+                    return new EastShow<EastFactionModel>();
                 case EnumModel.Faction.SouthFaction:
-                    return new WestFactionModel();
+                    return new EastShow<EastFactionModel>();
                 case EnumModel.Faction.WestFaction:
-                    return new WestFactionModel();
+                    return new EastShow<EastFactionModel>();
             }
             throw  new Exception("请检查参数是否配置正确");
         }

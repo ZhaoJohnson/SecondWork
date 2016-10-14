@@ -7,7 +7,8 @@ using ShowModel;
 
 namespace ShowService
 {
-    public class WestShow:BasicShow<WestFactionModel>
+    public class WestShow<Tmodel> : BasicShow<Tmodel>
+        where Tmodel : BasicModel, new()
     {
         public override void Bark()
         {

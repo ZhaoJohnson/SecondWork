@@ -26,3 +26,6 @@ D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\ShowService.pdb
 D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.exe
 D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.pdb
+F:\WorkBase\SecondWork\SecondWorkMainProject\bin\Debug\SecondWorkMainProject.exe.config
+F:\WorkBase\SecondWork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.exe
+F:\WorkBase\SecondWork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.pdb

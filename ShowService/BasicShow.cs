@@ -16,7 +16,7 @@ namespace ShowService
         public void InitialShow()
         {
             Type type = typeof (TModel);
-            
+            Console.WriteLine("接下来我们由请：{0}来为大家表演",type.Name);
         }
         /// <summary>
         /// 狗狗叫

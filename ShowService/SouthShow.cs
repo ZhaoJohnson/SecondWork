@@ -1,14 +1,14 @@
-﻿using System;
+﻿using ShowModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShowModel;
 
 namespace ShowService
 {
-    public class EastShow<Tmodel>:BasicShow<Tmodel>
-        where Tmodel : BasicModel ,new()
+    public class SouthShow<Tmodel> : BasicShow<Tmodel>
+        where Tmodel : BasicModel, new()
     {
         public override void Bark()
         {
@@ -17,11 +17,7 @@ namespace ShowService
 
         public override void HumanSound()
         {
-            new Exception("此处报错")
-           Tmodel model=new Tmodel();
-            model.Resident = "东方不败";
-            var Eastman = "不错我就是，"+model.Resident;
-            Console.WriteLine(Eastman);
+            throw new NotImplementedException();
         }
 
         public override void Wind()

@@ -8,5 +8,6 @@ namespace IShowModel
 {
     public interface IBasicModel
     {
+        
     }
 }

@@ -43,7 +43,9 @@
     <Compile Include="BasicShow.cs" />
     <Compile Include="EastShow.cs" />
     <Compile Include="IBasicShow.cs" />
+    <Compile Include="NorthShow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SouthShow.cs" />
     <Compile Include="WestShow.cs" />
   </ItemGroup>
   <ItemGroup>
