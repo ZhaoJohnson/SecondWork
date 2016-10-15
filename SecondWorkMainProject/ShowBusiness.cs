@@ -22,19 +22,18 @@ namespace SecondWorkMainProject
         private static List<Action> ListAct { get; set; }
         public static void StarShow(int Temperature, List<Action> act=null)
         {
-            var _ShowService = CreateService();
+            TService baseService = new TService();
             if (act!=null)
             {
                 foreach (Action item in act)
                 {
-                    _ShowService.ShowFire += item;
+                    baseService.ShowFire += item;
                 }
             }
-            _ShowService.Working();
-            _ShowService.SetTemperature(Temperature);
+            baseService.Working();
+            baseService.SetTemperature(Temperature);
             
         }
-
 
         #region Private Function
         private static void showPropertyName( IBasicModel model)
@@ -44,14 +43,7 @@ namespace SecondWorkMainProject
             {
                 Console.WriteLine(itemInfo.Name+":"+ itemInfo.GetValue(model));
             }
-            Console.WriteLine("******************动态分割线**************************");
-        }
-        
-        private static IBasicShow CreateService()
-        {
-            Type t = typeof(TService);
-            var TResult = (BasicShow<TModel>)Activator.CreateInstance(t);
-            return TResult;
+            Console.WriteLine("******************下面开始表演了**************************");
         }
                         
         #endregion

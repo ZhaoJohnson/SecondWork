@@ -16,19 +16,22 @@ namespace SecondWorkMainProject
     {
         static void Main( string[] args )
         {
+            //设置基础目录
             string TheBasePath = AppDomain.CurrentDomain.BaseDirectory;
             StreamWriter sw = MyLog.setStream(TheBasePath);
             try
             {
+                //此处Console.SetOut是不是会导致，不会再将输出显示在控制台上呢？
                 //ThreadStart starter = () => Console.SetOut(sw);
                 //new Thread(starter).Start();
-                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(1200, EastFireAction());
-                ThreadStart Eaststarter = () => Console.WriteLine("随机的线程会在哪里出现呢");
+                ThreadStart Eaststarter = () => Console.WriteLine("~~~~~~~~~~~~~~~~~~随机的线程会在哪里出现呢~~~~~~~~~~~~~~~~~~~");
                 new Thread(Eaststarter).Start();
+                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(1200, EastFireAction());
                 ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(1300, NorthFireAction());
                 ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(1400, SouthFireAction());
                 ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(1500, WestFireAction());
-                Console.WriteLine("表演结束");
+                Console.WriteLine("");
+                Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<表演结束>>>>>>>>>>>>>>>>>>>>>>>>>");
 
                 sw.Flush();
                 sw.Close();
