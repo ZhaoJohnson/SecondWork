@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ShowModel;
+using IShowModel;
 
 namespace ShowService
 {
-    public class WestShow<Tmodel> : BasicShow<Tmodel>
+    public class WestShow<Tmodel> : BasicShow<Tmodel>, IPay
         where Tmodel : BasicModel, new()
     {
         public override event Action ShowFire;
@@ -15,6 +16,11 @@ namespace ShowService
         public override void Bark()
         {
             
+        }
+
+        public void Fee()
+        {
+            throw new NotImplementedException();
         }
 
         public override void HumanSound()

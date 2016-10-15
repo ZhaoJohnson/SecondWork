@@ -1,4 +1,5 @@
-﻿using ShowModel;
+﻿using IShowModel;
+using ShowModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace ShowService
 {
-    public class SouthShow<Tmodel> : BasicShow<Tmodel>
+    public class SouthShow<Tmodel> : BasicShow<Tmodel>, IPay
         where Tmodel : BasicModel, new()
     {
         public override event Action ShowFire;
 
         public override void Bark()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Fee()
         {
             throw new NotImplementedException();
         }
