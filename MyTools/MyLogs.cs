@@ -27,9 +27,8 @@ namespace MyTools
             if (logfile != null)
             {
                 if (!File.Exists(LogPath+mylogpath))
-                {
-                    
-                }
+                    File.Create(LogPath + mylogpath);
+                
             }
         }
         private static int CreateOrLoad()

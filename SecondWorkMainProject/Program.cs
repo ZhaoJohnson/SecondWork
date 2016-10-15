@@ -6,75 +6,77 @@ using System.Threading.Tasks;
 using IShowModel;
 using ShowModel;
 using ShowService;
+using System.IO;
+using MyTools;
+using System.Threading;
 
 namespace SecondWorkMainProject
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main( string[] args )
         {
+            string TheBasePath = AppDomain.CurrentDomain.BaseDirectory;
+            StreamWriter sw = MyLog.setStream(TheBasePath);
             try
             {
-                //List<IBasicShow> ShowList = new List<IBasicShow>();
-                IBasicShow show1 = new EastShow<EastFactionModel>();
-                //show1.Working();
-                //show1.ShowFire += () => Console.WriteLine("张三说：大家快来看表演啊！！！！");
-                //IPay EastPay= new EastShow<EastFactionModel>();
-                //EastPay.Fee();
-                //IBasicShow show2 = CreateFactory(EnumModel.Faction.EastFaction);
-                //ShowList.Add(show1);
-                //ShowList.Add(show2);
-                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow((p)=>
-                {
-                    p.ShowFire += () => Console.WriteLine("123");
-                    p.SetTemperature(555);
-                    return () => Console.WriteLine("表演结束");
-                });
-                //ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.AddWorking(() => Console.WriteLine("哈哈哈"));
-                //ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow();
-                //ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow();
-                //ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow();
+                //ThreadStart starter = () => Console.SetOut(sw);
+                //new Thread(starter).Start();
+                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(1200, EastFireAction());
+                ThreadStart Eaststarter = () => Console.WriteLine("随机的线程会在哪里出现呢");
+                new Thread(Eaststarter).Start();
+                ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(1300, NorthFireAction());
+                ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(1400, SouthFireAction());
+                ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(1500, WestFireAction());
+                Console.WriteLine("表演结束");
+
+                sw.Flush();
+                sw.Close();
+                sw.Dispose();
                 Console.ReadKey();
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                MyLog.SaveEx(ex.Message);
                 throw ex;
             }
+
         }
-
-        static IBasicShow CreateFactory(EnumModel.Faction enumstring)
+                
+        static List<Action> EastFireAction()
         {
-            switch (enumstring)
-            {
-                case EnumModel.Faction.EastFaction:
-                    return new EastShow<EastFactionModel>();
-                case EnumModel.Faction.NorthFaction:
-                    return new NorthShow<NorthFactionModel>();
-                case EnumModel.Faction.SouthFaction:
-                    return new SouthShow<SouthFactionModel>();
-                case EnumModel.Faction.WestFaction:
-                    return new WestShow<WestFactionModel>();
-            }
-            throw  new Exception("请检查参数是否配置正确");
+            List<Action> result = new List<Action>();
+            Action a1 = () => Console.WriteLine("夫起大呼，妇亦起大呼。两儿齐哭。俄而百千人大呼，百千儿哭，百千犬吠。");
+            result.Add(a1);
+            return result;
         }
-
-        static IPay CostMoney(EnumModel.Faction theFaction)
+        static List<Action> NorthFireAction()
         {
-            switch (theFaction)
-            {
-                case EnumModel.Faction.EastFaction:
-                    return new EastShow<EastFactionModel>();
-                case EnumModel.Faction.NorthFaction:
-                    return new NorthShow<NorthFactionModel>();
-                case EnumModel.Faction.SouthFaction:
-                    return new EastShow<EastFactionModel>();
-                case EnumModel.Faction.WestFaction:
-                    return new EastShow<EastFactionModel>();
-                default:
-                    break;
-            }
-
+            List<Action> result = new List<Action>();
+            Action a1 = () => Console.WriteLine("既而儿醒，大啼。夫亦醒。");
+            Action a2 = () => Console.WriteLine("妇抚儿乳，儿含乳啼，妇拍而呜之。");
+            result.Add(a1);
+            result.Add(a2);
+            return result;
+        }
+        static List<Action> SouthFireAction()
+        {
+            List<Action> result = new List<Action>();
+            Action a1 = () => Console.WriteLine("当是时，妇手拍儿声，口中呜声，儿含乳啼声，大儿初醒声，夫叱大儿声，一时齐发，众妙毕备。");
+            Action a2 = () => Console.WriteLine("满坐宾客无不伸颈，侧目，微笑，默叹，以为妙绝。");
+            result.Add(a1);
+            result.Add(a2);
+            return result;
+        }
+        static List<Action> WestFireAction()
+        {
+            List<Action> result = new List<Action>();
+            Action a1 = () => Console.WriteLine("未几，夫齁声起，妇拍儿亦渐拍渐止。");
+            Action a2 = () => Console.WriteLine("微闻有鼠作作索索，盆器倾侧，妇梦中咳嗽。");
+            result.Add(a1);
+            return result;
         }
     }
 }

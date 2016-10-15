@@ -5,6 +5,5 @@ D:\test\HomeWork\SecondWork\MyTools\obj\Debug\MyTools.dll
 D:\test\HomeWork\SecondWork\MyTools\obj\Debug\MyTools.pdb
 F:\WorkBase\SecondWork\MyTools\bin\Debug\MyTools.dll
 F:\WorkBase\SecondWork\MyTools\bin\Debug\MyTools.pdb
-F:\WorkBase\SecondWork\MyTools\obj\Debug\MyTools.csprojResolveAssemblyReference.cache
 F:\WorkBase\SecondWork\MyTools\obj\Debug\MyTools.dll
 F:\WorkBase\SecondWork\MyTools\obj\Debug\MyTools.pdb

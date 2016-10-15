@@ -5,18 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using IShowModel;
 using ShowModel;
+using System.Reflection;
 
 namespace ShowService
 {
-    public abstract class BasicShow<TModel> : IBasicShow where TModel : IBasicModel
+    public abstract class BasicShow<TModel> : IBasicShow , IPay
+        where TModel : IBasicModel ,new()
     {
         /// <summary>
         /// 开场
         /// </summary>
         public void InitialShow()
         {
-            Type type = typeof(TModel);
-            Console.WriteLine("接下来我们由请：{0}来为大家表演", type.Name);
+            TModel model = new TModel();
+            showPropertyName(model);
+            Console.WriteLine("接下来我们由请：{0}来为大家表演", GetvalueName());
         }
         /// <summary>
         /// 狗狗叫
@@ -56,11 +59,41 @@ namespace ShowService
             HumanSound();
             Wind();
             ConcludingRemarks();
-            
+            Fee();
         }
         public void Dispose()
         {
          
         }
+
+        private string GetvalueName( )
+        {
+            switch (typeof(TModel).Name)
+            {
+                case "EastFactionModel":
+                    return "东派";
+                case "NorthFactionModel":
+                    return "北派";
+                case "SouthFactionModel":
+                    return "南派";
+                case "WestFactionModel":
+                    return "西派";
+                default:
+                    return "动物园";
+            }
+
+        }
+        private static void showPropertyName( TModel model)
+        {
+            Console.WriteLine("******************{0}的属性及值******************", typeof(TModel).Name);
+            foreach (PropertyInfo itemInfo in model.GetType().GetProperties())
+            {
+                Console.WriteLine(itemInfo.Name + ":" + itemInfo.GetValue(model));
+            }
+            Console.WriteLine("******************动态分割线**************************");
+        }
+
+        public abstract void Fee();
+        
     }
 }

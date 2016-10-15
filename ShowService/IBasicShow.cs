@@ -10,6 +10,7 @@ namespace ShowService
     public interface IBasicShow:IDisposable
     {
         void Working();
+        void SetTemperature( int temperature );
         event Action ShowFire;
     }
 }

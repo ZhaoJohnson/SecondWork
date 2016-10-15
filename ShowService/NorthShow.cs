@@ -12,20 +12,20 @@ namespace ShowService
         where Tmodel : BasicModel, new()
     {
         public override event Action ShowFire;
-
+        Tmodel model = new Tmodel();
         public override void Bark()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"北派的小狗北{model.Ruler}打了，到处乱叫");
         }
 
-        public void Fee()
+        public override void Fee()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"北派门票费用被德海社收走了！！！55555~");
         }
 
         public override void HumanSound()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{model.Resident}在{model.Table}被踢倒后，站了起来");
         }
 
         public override void SetTemperature( int temperature )
@@ -34,14 +34,19 @@ namespace ShowService
                 return;
 
             if (temperature == 200)
-                Console.WriteLine("东派表演的掌声轰鸣，热情值上涨{0}", temperature);
-            if (temperature >= 400)
+                Console.WriteLine("北派派表演的掌声轰鸣，热情值上涨{0}", temperature);
+            if (temperature >= 1000)
                 ShowFire.Invoke();
         }
 
         public override void Wind()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{model.Fan}被{model.Resident}挥舞出了一阵大风");
+        }
+
+        public override void ConcludingRemarks()
+        {
+            Console.WriteLine($"我们要去德海社讨回工资！");
         }
     }
 }
