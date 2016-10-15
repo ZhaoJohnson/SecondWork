@@ -7,12 +7,3 @@ D:\test\HomeWork\SecondWork\ShowModel\bin\Debug\MyTools.pdb
 D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.csprojResolveAssemblyReference.cache
 D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.dll
 D:\test\HomeWork\SecondWork\ShowModel\obj\Debug\ShowModel.pdb
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\ShowModel.dll
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\ShowModel.pdb
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\IShowModel.dll
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\MyTools.dll
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\IShowModel.pdb
-F:\WorkBase\SecondWork\ShowModel\bin\Debug\MyTools.pdb
-F:\WorkBase\SecondWork\ShowModel\obj\Debug\ShowModel.csprojResolveAssemblyReference.cache
-F:\WorkBase\SecondWork\ShowModel\obj\Debug\ShowModel.dll
-F:\WorkBase\SecondWork\ShowModel\obj\Debug\ShowModel.pdb

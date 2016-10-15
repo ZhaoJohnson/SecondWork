@@ -90,7 +90,7 @@ namespace ShowService
             {
                 Console.WriteLine(itemInfo.Name + ":" + itemInfo.GetValue(model));
             }
-            Console.WriteLine("******************动态分割线**************************");
+            Console.WriteLine("******************下面开始表演了**************************");
         }
 
         public abstract void Fee();

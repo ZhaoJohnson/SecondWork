@@ -20,14 +20,3 @@ D:\Users\Secondwork\ShowService\bin\Debug\MyTools.pdb
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.dll
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.pdb
-F:\WorkBase\SecondWork\ShowService\obj\Debug\ShowService.csprojResolveAssemblyReference.cache
-F:\WorkBase\SecondWork\ShowService\obj\Debug\ShowService.dll
-F:\WorkBase\SecondWork\ShowService\obj\Debug\ShowService.pdb
-F:\WorkBase\SecondWork\ShowService\bin\Debug\ShowService.dll
-F:\WorkBase\SecondWork\ShowService\bin\Debug\ShowService.pdb
-F:\WorkBase\SecondWork\ShowService\bin\Debug\IShowModel.dll
-F:\WorkBase\SecondWork\ShowService\bin\Debug\ShowModel.dll
-F:\WorkBase\SecondWork\ShowService\bin\Debug\MyTools.dll
-F:\WorkBase\SecondWork\ShowService\bin\Debug\IShowModel.pdb
-F:\WorkBase\SecondWork\ShowService\bin\Debug\ShowModel.pdb
-F:\WorkBase\SecondWork\ShowService\bin\Debug\MyTools.pdb

@@ -15,11 +15,12 @@ namespace SecondWorkMainProject
         where TService:BasicShow<TModel>,new()
         where TModel:BasicModel,new()
     {
+        
         public void Dispose()
         {
             
         }
-        private static List<Action> ListAct { get; set; }
+        
         public static void StarShow(int Temperature, List<Action> act=null)
         {
             TService baseService = new TService();
@@ -32,20 +33,7 @@ namespace SecondWorkMainProject
             }
             baseService.Working();
             baseService.SetTemperature(Temperature);
-            
         }
-
-        #region Private Function
-        private static void showPropertyName( IBasicModel model)
-        {
-            Console.WriteLine("******************{0}的属性及值******************", model.GetType().Name);
-            foreach (PropertyInfo itemInfo in model.GetType().GetProperties())
-            {
-                Console.WriteLine(itemInfo.Name+":"+ itemInfo.GetValue(model));
-            }
-            Console.WriteLine("******************下面开始表演了**************************");
-        }
-                        
-        #endregion
+        
     }
 }

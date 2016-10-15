@@ -21,7 +21,7 @@ namespace SecondWorkMainProject
             StreamWriter sw = MyLog.setStream(TheBasePath);
             try
             {
-                //此处Console.SetOut是不是会导致，不会再将输出显示在控制台上呢？
+                //此处Console.SetOut是不是会导致，不会再将输出显示在控制台上呢？想不出什么好的将输出全部记录的简单方法。。。
                 //ThreadStart starter = () => Console.SetOut(sw);
                 //new Thread(starter).Start();
                 ThreadStart Eaststarter = () => Console.WriteLine("~~~~~~~~~~~~~~~~~~随机的线程会在哪里出现呢~~~~~~~~~~~~~~~~~~~");
