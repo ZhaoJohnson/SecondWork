@@ -8,11 +8,7 @@ namespace ShowModel
 {
     public class SouthFactionModel : BasicModel
     {
-        public override string Resident { get; set; }
-        public override string Table { get; set; }
-        public override string Chair { get; set; }
-        public override string Fan { get; set; }
-        public override string Ruler { get; set; }
+       
         public SouthFactionModel()
         {
             Chair = "南派小板凳";

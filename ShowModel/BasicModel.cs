@@ -12,22 +12,22 @@ namespace ShowModel
         /// <summary>
         /// 人
         /// </summary>
-        public abstract string Resident { get; set; }
+        public virtual string Resident { get; set; }
         /// <summary>
         /// 桌
         /// </summary>
-        public abstract string Table { get; set; }
+        public virtual string Table { get; set; }
         /// <summary>
         /// 椅
         /// </summary>
-        public abstract string Chair { get; set; }
+        public virtual string Chair { get; set; }
         /// <summary>
         /// 扇
         /// </summary>
-        public abstract string Fan { get; set; }
+        public virtual string Fan { get; set; }
         /// <summary>
         /// 尺
         /// </summary>
-        public abstract string Ruler { get; set; }
+        public virtual string Ruler { get; set; }
     }
 }

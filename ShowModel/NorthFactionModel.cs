@@ -8,11 +8,7 @@ namespace ShowModel
 {
     public class NorthFactionModel : BasicModel
     {
-        public override string Resident { get; set; }
-        public override string Table { get; set; }
-        public override string Chair { get; set; }
-        public override string Fan { get; set; }
-        public override string Ruler { get; set; }
+        
         public NorthFactionModel()
         {
             Chair = "北派折叠椅";
