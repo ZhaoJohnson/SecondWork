@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace ShowModel
 {
     public class SouthFactionModel : BasicModel
     {
-       
+        [DisplayValueAttributes("北派")]
         public SouthFactionModel()
         {
             Chair = "南派小板凳";
