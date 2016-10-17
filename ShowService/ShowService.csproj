@@ -53,6 +53,10 @@
       <Project>{507016da-f5ea-440f-8e4e-0fd9696eacd5}</Project>
       <Name>IShowModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyTools\MyTools.csproj">
+      <Project>{5ca40316-6f5e-4f70-b9f2-0c5c34372d7b}</Project>
+      <Name>MyTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShowModel\ShowModel.csproj">
       <Project>{2eb006de-257c-45a8-9b02-6e535956bf84}</Project>
       <Name>ShowModel</Name>

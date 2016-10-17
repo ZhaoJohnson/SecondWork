@@ -12,11 +12,11 @@ D:\test\HomeWork\SecondWork\ShowService\obj\Debug\ShowService.pdb
 D:\Users\Secondwork\ShowService\bin\Debug\ShowService.dll
 D:\Users\Secondwork\ShowService\bin\Debug\ShowService.pdb
 D:\Users\Secondwork\ShowService\bin\Debug\IShowModel.dll
-D:\Users\Secondwork\ShowService\bin\Debug\ShowModel.dll
 D:\Users\Secondwork\ShowService\bin\Debug\MyTools.dll
+D:\Users\Secondwork\ShowService\bin\Debug\ShowModel.dll
 D:\Users\Secondwork\ShowService\bin\Debug\IShowModel.pdb
-D:\Users\Secondwork\ShowService\bin\Debug\ShowModel.pdb
 D:\Users\Secondwork\ShowService\bin\Debug\MyTools.pdb
+D:\Users\Secondwork\ShowService\bin\Debug\ShowModel.pdb
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.dll
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.pdb

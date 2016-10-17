@@ -1,33 +1,22 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace MyTools
 {
     public static class MyLog
     {
-        public static StreamWriter setStream(string LogPath)
+        private static StringBuilder _txtBuilder;
+        public static void OutputAndSaveTxt(string message)
         {
-            string logFileNmae = "Log_" + DateTime.Today.ToString("MMddyyyy") + ".txt";
-            string FullPath = Path.Combine(LogPath, logFileNmae);
-            StreamWriter writer = null;
+            Console.WriteLine(message);
+            _txtBuilder.AppendLine(message);
 
-            if (Directory.Exists(LogPath))
-            {
-                if (File.Exists(FullPath))
-                    writer = File.AppendText(FullPath);
-                else
-                    writer = File.CreateText(FullPath);
-            }
-            else
-            {
-                Directory.CreateDirectory(LogPath);
-                writer = File.CreateText(FullPath);
-            }
-            return writer;
         }
         public static void SaveEx(string message )
         {
+            Console.WriteLine(message);
             string TheBasePath = AppDomain.CurrentDomain.BaseDirectory;
             string LogPath = TheBasePath + "MyLogs";
             string dateTodayfileName = DateTime.Now.ToString("mmmm_dd_yyyy") + "logs.txt";
@@ -40,6 +29,23 @@ namespace MyTools
             using (StreamWriter mysw = new StreamWriter(myfs))
             {
                 mysw.WriteLine(message);
+                mysw.Flush();
+                mysw.Close();
+                myfs.Close();
+            }
+        }
+
+        public static void SaveEnd()
+        {
+            string LogPath = AppDomain.CurrentDomain.BaseDirectory;
+            string logFileNmae = "Log_" + DateTime.Today.ToString("MMddyyyy") + ".txt";
+            string FullPath = Path.Combine(LogPath, logFileNmae);
+            StreamWriter writer = null;
+
+            FileStream myfs = new FileStream(FullPath, FileMode.OpenOrCreate);
+            using (StreamWriter mysw = new StreamWriter(myfs))
+            {
+                mysw.WriteLine(_txtBuilder.ToString());
                 mysw.Flush();
                 mysw.Close();
                 myfs.Close();

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ShowModel;
 using IShowModel;
+using MyTools;
 
 namespace ShowService
 {
@@ -15,17 +16,17 @@ namespace ShowService
         Tmodel model = new Tmodel();
         public override void Bark()
         {
-            Console.WriteLine($"西派养的藏獒咬断了{model.Ruler},并跳上了{model.Table},对着{model.Resident}大叫！");
+            MyLog.OutputAndSaveTxt($"西派养的藏獒咬断了{model.Ruler},并跳上了{model.Table},对着{model.Resident}大叫！");
         }
 
         public override void Fee()
         {
-            Console.WriteLine("每人收取五匹丝绸");
+            MyLog.OutputAndSaveTxt("每人收取五匹丝绸");
         }
 
         public override void HumanSound()
         {
-            Console.WriteLine($"{model.Resident}没有发出什么声音");
+            MyLog.OutputAndSaveTxt($"{model.Resident}没有发出什么声音");
         }
 
         public override void SetTemperature( int temperature )
@@ -34,22 +35,22 @@ namespace ShowService
                 return;
 
             if (temperature == 400)
-                Console.WriteLine("西派表演的掌声轰鸣，热情值上涨{0}", temperature);
+                MyLog.OutputAndSaveTxt($"西派表演的掌声轰鸣，热情值上涨{temperature}");
             if (temperature >= 1600)
                 ShowFire.Invoke();
         }
 
         public override void Wind()
         {
-            Console.WriteLine($"{model.Fan}似乎没有什么风");
+            MyLog.OutputAndSaveTxt($"{model.Fan}似乎没有什么风");
         }
         public override void ConcludingRemarks()
         {
-            Console.WriteLine("阿弥托福");
+            MyLog.OutputAndSaveTxt("阿弥托福");
         }
         public override void Prologue()
         {
-            Console.WriteLine("还有谁！");
+            MyLog.OutputAndSaveTxt("还有谁！");
         }
     }
 }

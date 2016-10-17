@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyTools;
 
 namespace ShowService
 {
@@ -15,21 +16,21 @@ namespace ShowService
         public override event Action ShowFire;
         public override void Prologue()
         {
-            Console.WriteLine("泪滴森，安嘚，贱特们");
+            MyLog.OutputAndSaveTxt("泪滴森，安嘚，贱特们");
         }
         public override void Bark()
         {
-            Console.WriteLine("南派养都是小柴犬");
+            MyLog.OutputAndSaveTxt("南派养都是小柴犬");
         }
 
         public override void Fee()
         {
-            Console.WriteLine("南派门票要收500元");
+            MyLog.OutputAndSaveTxt("南派门票要收500元");
         }
 
         public override void HumanSound()
         {
-            Console.WriteLine("{0}，在一个转身后发出了“啦啦”的声音",model.Resident);
+            MyLog.OutputAndSaveTxt($"{model.Resident}，在一个转身后发出了“啦啦”的声音");
         }
 
         public override void SetTemperature( int temperature )
@@ -38,14 +39,14 @@ namespace ShowService
                 return;
 
             if (temperature == 300)
-                Console.WriteLine("南派表演的掌声轰鸣，热情值上涨{0}", temperature);
+                MyLog.OutputAndSaveTxt($"南派表演的掌声轰鸣，热情值上涨{temperature}");
             if (temperature >= 1200)
                 ShowFire.Invoke();
         }
 
         public override void Wind()
         {
-            Console.WriteLine($"{model.Fan}吹来了阵阵微风");
+            MyLog.OutputAndSaveTxt($"{model.Fan}吹来了阵阵微风");
         }
     }
 }

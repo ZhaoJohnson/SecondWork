@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IShowModel;
 using ShowModel;
 using System.Reflection;
+using MyTools;
 
 namespace ShowService
 {
@@ -23,7 +24,7 @@ namespace ShowService
         {
             TModel model = new TModel();
             ShowPropertyName(model);
-            Console.WriteLine("接下来我们由请：{0}来为大家表演", GetvalueName());
+            MyLog.OutputAndSaveTxt($"接下来我们由请：{GetvalueName()}来为大家表演");
         }
         /// <summary>
         /// 狗狗叫
@@ -43,14 +44,14 @@ namespace ShowService
         /// </summary>
         public virtual void Prologue()
         {
-            Console.WriteLine("Welcome!");
+            MyLog.OutputAndSaveTxt("Welcome!");
         }
         /// <summary>
         /// 闭幕，结束语
         /// </summary>
         public virtual void ConcludingRemarks()
         {
-            Console.WriteLine("See U Again!");
+            MyLog.OutputAndSaveTxt("See U Again!");
         }
         public abstract event Action ShowFire;
         public abstract void SetTemperature(int temperature);
@@ -98,12 +99,12 @@ namespace ShowService
         /// <param name="model"></param>
         private static void ShowPropertyName(TModel model)
         {
-            Console.WriteLine("******************{0}的属性及值******************", GetvalueName());
+            MyLog.OutputAndSaveTxt($"******************{GetvalueName()}的属性及值******************");
             foreach (PropertyInfo itemInfo in model.GetType().GetProperties())
             {
-                Console.WriteLine(itemInfo.Name + ":" + itemInfo.GetValue(model));
+                MyLog.OutputAndSaveTxt(itemInfo.Name + ":" + itemInfo.GetValue(model));
             }
-            Console.WriteLine("******************下面开始表演了**************************");
+            MyLog.OutputAndSaveTxt("******************下面开始表演了**************************");
         }
         /// <summary>
         /// 收费
