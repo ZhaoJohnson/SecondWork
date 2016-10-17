@@ -36,7 +36,7 @@ namespace ShowService
 
             if (temperature == 200)
                 Console.WriteLine("东派表演的掌声轰鸣，热情值上涨{0}", temperature);
-            if (temperature >= 400)
+            if (temperature >= 800)
             {
                 Console.WriteLine("现在温度{0}太高了，火太大了！！！", temperature);
                 ShowFire.Invoke();

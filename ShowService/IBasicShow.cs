@@ -7,6 +7,9 @@ using IShowModel;
 
 namespace ShowService
 {
+    /// <summary>
+    /// 接口控制对外开放事项
+    /// </summary>
     public interface IBasicShow:IDisposable
     {
         void Working();

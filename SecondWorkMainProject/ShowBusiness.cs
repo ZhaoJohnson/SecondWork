@@ -20,8 +20,12 @@ namespace SecondWorkMainProject
         {
             
         }
-        
-        public static void StarShow(int Temperature, List<Action> act=null)
+        /// <summary>
+        /// 应用层直接调用
+        /// </summary>
+        /// <param name="temperature"></param>
+        /// <param name="act"></param>
+        public static void StarShow(int temperature, List<Action> act=null)
         {
             TService baseService = new TService();
             if (act!=null)
@@ -32,7 +36,7 @@ namespace SecondWorkMainProject
                 }
             }
             baseService.Working();
-            baseService.SetTemperature(Temperature);
+            baseService.SetTemperature(temperature);
         }
         
     }

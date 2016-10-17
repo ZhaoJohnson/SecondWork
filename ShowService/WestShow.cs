@@ -33,9 +33,9 @@ namespace ShowService
             if (ShowFire == null)
                 return;
 
-            if (temperature == 200)
-                Console.WriteLine("东派表演的掌声轰鸣，热情值上涨{0}", temperature);
-            if (temperature >= 400)
+            if (temperature == 400)
+                Console.WriteLine("西派表演的掌声轰鸣，热情值上涨{0}", temperature);
+            if (temperature >= 1600)
                 ShowFire.Invoke();
         }
 

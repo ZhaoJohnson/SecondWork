@@ -26,16 +26,16 @@ namespace SecondWorkMainProject
                 //new Thread(starter).Start();
                 ThreadStart Eaststarter = () => Console.WriteLine("~~~~~~~~~~~~~~~~~~随机的线程会在哪里出现呢~~~~~~~~~~~~~~~~~~~");
                 new Thread(Eaststarter).Start();
-                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(1200, EastFireAction());
-                ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(1300, NorthFireAction());
-                ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(1400, SouthFireAction());
-                ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(1500, WestFireAction());
+                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(200, EastFireAction());
+                ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(200, NorthFireAction());
+                ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(200, SouthFireAction());
+                ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(200, WestFireAction());
                 Console.WriteLine("");
                 Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<表演结束>>>>>>>>>>>>>>>>>>>>>>>>>");
 
-                sw.Flush();
-                sw.Close();
-                sw.Dispose();
+                //sw.Flush();
+                //sw.Close();
+                //sw.Dispose();
                 Console.ReadKey();
 
             }
@@ -47,7 +47,7 @@ namespace SecondWorkMainProject
             }
 
         }
-                
+           
         static List<Action> EastFireAction()
         {
             List<Action> result = new List<Action>();

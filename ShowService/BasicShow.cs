@@ -9,8 +9,12 @@ using System.Reflection;
 
 namespace ShowService
 {
-    public abstract class BasicShow<TModel> : IBasicShow , IPay
-        where TModel : IBasicModel ,new()
+    /// <summary>
+    /// 业务层负责实现具体业务
+    /// </summary>
+    /// <typeparam name="TModel"></typeparam>
+    public abstract class BasicShow<TModel> : IBasicShow, IPay
+        where TModel : IBasicModel, new()
     {
         /// <summary>
         /// 开场
@@ -18,7 +22,7 @@ namespace ShowService
         public void InitialShow()
         {
             TModel model = new TModel();
-            showPropertyName(model);
+            ShowPropertyName(model);
             Console.WriteLine("接下来我们由请：{0}来为大家表演", GetvalueName());
         }
         /// <summary>
@@ -49,8 +53,10 @@ namespace ShowService
             Console.WriteLine("See U Again!");
         }
         public abstract event Action ShowFire;
-        public abstract void SetTemperature( int temperature );
-       
+        public abstract void SetTemperature(int temperature);
+        /// <summary>
+        /// 统一调用顺序,当然这样调用方法确实不合理 - -#
+        /// </summary>
         public virtual void Working()
         {
             InitialShow();
@@ -63,10 +69,13 @@ namespace ShowService
         }
         public void Dispose()
         {
-         
-        }
 
-        private string GetvalueName( )
+        }
+        /// <summary>
+        /// 获取当前类的显示值
+        /// </summary>
+        /// <returns></returns>
+        private static string GetvalueName()
         {
             switch (typeof(TModel).Name)
             {
@@ -83,17 +92,23 @@ namespace ShowService
             }
 
         }
-        private static void showPropertyName( TModel model)
+        /// <summary>
+        /// 通过反射显示属性及值
+        /// </summary>
+        /// <param name="model"></param>
+        private static void ShowPropertyName(TModel model)
         {
-            Console.WriteLine("******************{0}的属性及值******************", typeof(TModel).Name);
+            Console.WriteLine("******************{0}的属性及值******************", GetvalueName());
             foreach (PropertyInfo itemInfo in model.GetType().GetProperties())
             {
                 Console.WriteLine(itemInfo.Name + ":" + itemInfo.GetValue(model));
             }
             Console.WriteLine("******************下面开始表演了**************************");
         }
-
+        /// <summary>
+        /// 收费
+        /// </summary>
         public abstract void Fee();
-        
+
     }
 }
