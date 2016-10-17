@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShowService
 {
-    public class SouthShow<Tmodel> : BasicShow<Tmodel>, IPay
+    public class SouthShow<Tmodel> : BasicShow<Tmodel>
         where Tmodel : BasicModel, new()
     {
         Tmodel model = new Tmodel();

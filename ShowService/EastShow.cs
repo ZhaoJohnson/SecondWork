@@ -8,7 +8,7 @@ using IShowModel;
 
 namespace ShowService
 {
-    public class EastShow<Tmodel> : BasicShow<Tmodel>, IPay
+    public class EastShow<Tmodel> : BasicShow<Tmodel>
         where Tmodel : BasicModel, new()
     {
         public override event Action ShowFire;

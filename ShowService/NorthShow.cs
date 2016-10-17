@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShowService
 {
-    public class NorthShow<Tmodel> : BasicShow<Tmodel>, IPay
+    public class NorthShow<Tmodel> : BasicShow<Tmodel>
         where Tmodel : BasicModel, new()
     {
         public override event Action ShowFire;
