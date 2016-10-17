@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowService", "..\ShowServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowModel", "..\ShowModel\ShowModel.csproj", "{2EB006DE-257C-45A8-9B02-6E535956BF84}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModelLayer", "ModelLayer", "{5B07FCB5-2005-4936-A602-39E17A6A8949}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LogicLayer", "LogicLayer", "{D9EA2754-9DD4-45FA-934E-2DF0D6F11535}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{507016DA-F5EA-440F-8E4E-0FD9696EACD5} = {5B07FCB5-2005-4936-A602-39E17A6A8949}
+		{5CA40316-6F5E-4F70-B9F2-0C5C34372D7B} = {D9EA2754-9DD4-45FA-934E-2DF0D6F11535}
+		{8BE53450-EF33-428C-9A92-6D89F8D7429D} = {D9EA2754-9DD4-45FA-934E-2DF0D6F11535}
+		{2EB006DE-257C-45A8-9B02-6E535956BF84} = {5B07FCB5-2005-4936-A602-39E17A6A8949}
 	EndGlobalSection
 EndGlobal

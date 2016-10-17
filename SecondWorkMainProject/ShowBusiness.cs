@@ -21,7 +21,7 @@ namespace SecondWorkMainProject
             
         }
         /// <summary>
-        /// 应用层直接调用
+        /// 应用层直接调用,不再处理业务逻辑
         /// </summary>
         /// <param name="temperature"></param>
         /// <param name="act"></param>
