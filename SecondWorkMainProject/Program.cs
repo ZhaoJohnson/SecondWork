@@ -43,17 +43,21 @@ namespace SecondWorkMainProject
             catch (Exception ex)
             {
                 MyLog.SaveEx(ex.Message);
-                throw ex;
             }
 
         }
            
         static List<Action> EastFireAction()
         {
-            List<Action> result = new List<Action>();
-            Action a1 = () => MyLog.OutputAndSaveTxt("夫起大呼，妇亦起大呼。两儿齐哭。俄而百千人大呼，百千儿哭，百千犬吠。");
-            result.Add(a1);
-            return result;
+            return new List<Action>()
+            {
+                ()=>Console.WriteLine("夫起大呼,"),
+                ()=>Console.WriteLine("妇亦起大呼。"),
+                ()=>Console.WriteLine("两儿齐哭。"),
+                ()=>Console.WriteLine("俄而百千人大呼，"),
+                ()=>Console.WriteLine("百千儿哭，"),
+                ()=>Console.WriteLine("百千犬吠。")
+            };
         }
         static List<Action> NorthFireAction()
         {
@@ -62,6 +66,7 @@ namespace SecondWorkMainProject
             Action a2 = () => MyLog.OutputAndSaveTxt("妇抚儿乳，儿含乳啼，妇拍而呜之。");
             result.Add(a1);
             result.Add(a2);
+            
             return result;
         }
         static List<Action> SouthFireAction()

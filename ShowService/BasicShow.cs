@@ -22,6 +22,7 @@ namespace ShowService
         /// </summary>
         public void InitialShow()
         {
+            ///Update,挑中为通过反射+读取配置文件（Json/Xml）新建对象。
             TModel model = new TModel();
             ShowPropertyName(model);
             MyLog.OutputAndSaveTxt($"接下来我们由请：{GetvalueName()}来为大家表演");
