@@ -39,7 +39,7 @@ namespace ShowService
                 MyLog.OutputAndSaveTxt($"东派表演的掌声轰鸣，热情值上涨{temperature}" );
             if (temperature >= 800)
             {
-                MyLog.OutputAndSaveTxt("现在温度{temperature}太高了，火太大了！！！" );
+                MyLog.OutputAndSaveTxt($"现在温度{temperature}太高了，火太大了！！！" );
                 ShowFire.Invoke();
             }
 

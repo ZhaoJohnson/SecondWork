@@ -8,6 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using MyTools;
 
 namespace SecondWorkMainProject
 {
@@ -31,6 +32,13 @@ namespace SecondWorkMainProject
             if (act!=null)
             {
                 foreach (Action item in act)
+                {
+                    baseService.ShowFire += item;
+                }
+            }
+            else
+            {
+                foreach (Action item in XmlReader.Read(typeof(TModel).Name))
                 {
                     baseService.ShowFire += item;
                 }

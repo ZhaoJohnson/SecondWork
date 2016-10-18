@@ -11,7 +11,7 @@ namespace MyTools
         public static void OutputAndSaveTxt(string message)
         {
             Console.WriteLine(message);
-            _txtBuilder.AppendLine(message);
+         //   _txtBuilder.AppendLine(message);
 
         }
         public static void SaveEx(string message )
