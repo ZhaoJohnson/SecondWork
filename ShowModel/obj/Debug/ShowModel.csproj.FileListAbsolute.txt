@@ -16,3 +16,5 @@ D:\Users\Secondwork\ShowModel\bin\Debug\MyTools.pdb
 D:\Users\Secondwork\ShowModel\obj\Debug\ShowModel.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\ShowModel\obj\Debug\ShowModel.dll
 D:\Users\Secondwork\ShowModel\obj\Debug\ShowModel.pdb
+D:\Users\Secondwork\ShowModel\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Secondwork\ShowModel\bin\Debug\Newtonsoft.Json.xml

@@ -100,11 +100,13 @@ namespace ShowService
         /// <param name="model"></param>
         private static void ShowPropertyName(TModel model)
         {
+            var tResult = MyJsonHelper.Json2Object(model);
             MyLog.OutputAndSaveTxt($"******************{GetvalueName()}的属性及值******************");
-            foreach (PropertyInfo itemInfo in model.GetType().GetProperties())
+            foreach (PropertyInfo itemInfo in tResult.GetType().GetProperties())
             {
-                MyLog.OutputAndSaveTxt(itemInfo.Name + ":" + itemInfo.GetValue(model));
+                MyLog.OutputAndSaveTxt(itemInfo.Name + ":" + itemInfo.GetValue(tResult));
             }
+           
             MyLog.OutputAndSaveTxt("******************下面开始表演了**************************");
         }
         /// <summary>

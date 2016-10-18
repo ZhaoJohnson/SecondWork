@@ -19,6 +19,7 @@ namespace SecondWorkMainProject
             //设置基础目录
             try
             {
+                EastFactionModel east=new EastFactionModel();
 
                 ThreadStart Eaststarter =
                   () => MyLog.OutputAndSaveTxt("~~~~~~~~~~~~~~~~~~随机的线程会在哪里出现呢~~~~~~~~~~~~~~~~~~~");

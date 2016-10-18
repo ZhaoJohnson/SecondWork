@@ -8,3 +8,5 @@ D:\Users\Secondwork\MyTools\bin\Debug\MyTools.pdb
 D:\Users\Secondwork\MyTools\obj\Debug\MyTools.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\MyTools\obj\Debug\MyTools.dll
 D:\Users\Secondwork\MyTools\obj\Debug\MyTools.pdb
+D:\Users\Secondwork\MyTools\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Secondwork\MyTools\bin\Debug\Newtonsoft.Json.xml

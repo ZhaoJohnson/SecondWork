@@ -20,3 +20,5 @@ D:\Users\Secondwork\ShowService\bin\Debug\ShowModel.pdb
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.csprojResolveAssemblyReference.cache
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.dll
 D:\Users\Secondwork\ShowService\obj\Debug\ShowService.pdb
+D:\Users\Secondwork\ShowService\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Secondwork\ShowService\bin\Debug\Newtonsoft.Json.xml

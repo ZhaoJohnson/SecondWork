@@ -27,3 +27,5 @@ D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.csproj
 D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.exe
 D:\Users\Secondwork\SecondWorkMainProject\obj\Debug\SecondWorkMainProject.pdb
 F:\WorkBase\SecondWork\SecondWorkMainProject\bin\Debug\SecondWorkMainProject.exe.config
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Secondwork\SecondWorkMainProject\bin\Debug\Newtonsoft.Json.xml
