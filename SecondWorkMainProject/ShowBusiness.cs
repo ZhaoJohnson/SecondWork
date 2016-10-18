@@ -45,6 +45,7 @@ namespace SecondWorkMainProject
             }
             baseService.Working();
             baseService.SetTemperature(temperature);
+            Console.WriteLine("**********************************************");
         }
         
     }

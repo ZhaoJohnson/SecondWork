@@ -7,17 +7,22 @@ namespace MyTools
 {
     public static class MyLog
     {
+        static readonly string TheBasePath = AppDomain.CurrentDomain.BaseDirectory;
         private static StringBuilder _txtBuilder;
         public static void OutputAndSaveTxt(string message)
         {
+
             Console.WriteLine(message);
-         //   _txtBuilder.AppendLine(message);
+            if (!File.Exists(Path.Combine(TheBasePath, "Alloutput.txt")))
+                File.Create(Path.Combine(TheBasePath, "Alloutput.txt"));
+            File.AppendAllText(Path.Combine(TheBasePath, "Alloutput.txt"), message);
+            //   _txtBuilder.AppendLine(message);
 
         }
         public static void SaveEx(string message )
         {
             Console.WriteLine(message);
-            string TheBasePath = AppDomain.CurrentDomain.BaseDirectory;
+            
             string LogPath = TheBasePath + "MyLogs";
             string dateTodayfileName = DateTime.Now.ToString("mmmm_dd_yyyy") + "logs.txt";
             if (!Directory.Exists(LogPath))
@@ -35,21 +40,5 @@ namespace MyTools
             }
         }
 
-        public static void SaveEnd()
-        {
-            string LogPath = AppDomain.CurrentDomain.BaseDirectory;
-            string logFileNmae = "Log_" + DateTime.Today.ToString("MMddyyyy") + ".txt";
-            string FullPath = Path.Combine(LogPath, logFileNmae);
-            StreamWriter writer = null;
-
-            FileStream myfs = new FileStream(FullPath, FileMode.OpenOrCreate);
-            using (StreamWriter mysw = new StreamWriter(myfs))
-            {
-                mysw.WriteLine(_txtBuilder.ToString());
-                mysw.Flush();
-                mysw.Close();
-                myfs.Close();
-            }
-        }
     }
 }

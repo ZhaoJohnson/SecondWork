@@ -22,10 +22,9 @@ namespace ShowService
         /// </summary>
         public void InitialShow()
         {
-            ///Update,挑中为通过反射+读取配置文件（Json/Xml）新建对象。
+            ///Update,通过反射+读取配置文件（Json/Xml）新建对象。
             TModel model = new TModel();
             ShowPropertyName(model);
-            MyLog.OutputAndSaveTxt($"接下来我们由请：{GetvalueName()}来为大家表演");
         }
         /// <summary>
         /// 狗狗叫
@@ -73,27 +72,7 @@ namespace ShowService
         {
 
         }
-        /// <summary>
-        /// 获取当前类的显示值
-        /// </summary>
-        /// <returns></returns>
-        private static string GetvalueName()
-        {
-            switch (typeof(TModel).Name)
-            {
-                case "EastFactionModel":
-                    return "东派";
-                case "NorthFactionModel":
-                    return "北派";
-                case "SouthFactionModel":
-                    return "南派";
-                case "WestFactionModel":
-                    return "西派";
-                default:
-                    return "动物园";
-            }
-
-        }
+        
         /// <summary>
         /// 通过反射显示属性及值
         /// </summary>
@@ -101,7 +80,7 @@ namespace ShowService
         private static void ShowPropertyName(TModel model)
         {
             var tResult = MyJsonHelper.Json2Object(model);
-            MyLog.OutputAndSaveTxt($"******************{GetvalueName()}的属性及值******************");
+            MyLog.OutputAndSaveTxt($"******************{GetObjectName<TModel>()}的属性及值******************");
             foreach (PropertyInfo itemInfo in tResult.GetType().GetProperties())
             {
                 MyLog.OutputAndSaveTxt(itemInfo.Name + ":" + itemInfo.GetValue(tResult));
@@ -113,6 +92,21 @@ namespace ShowService
         /// 收费
         /// </summary>
         public abstract void Fee();
-
+        private static string GetObjectName<TModel>()
+        {
+            Type type = typeof (TModel);
+            
+            string PrimaryKey = string.Empty;
+            foreach (var item in type.GetCustomAttributes(false))
+            {
+                if (item.GetType() == typeof(DisplayValueAttributes))
+                {
+                    DisplayValueAttributes propertyValue = item as DisplayValueAttributes;
+                   return propertyValue.Value;
+                }
+            }
+            if (string.IsNullOrEmpty(PrimaryKey)) return null;
+            return PrimaryKey;
+        }
     }
 }

@@ -19,20 +19,14 @@ namespace SecondWorkMainProject
             //设置基础目录
             try
             {
-                EastFactionModel east=new EastFactionModel();
-
-                ThreadStart Eaststarter =
-                  () => MyLog.OutputAndSaveTxt("~~~~~~~~~~~~~~~~~~随机的线程会在哪里出现呢~~~~~~~~~~~~~~~~~~~");
-                new Thread(Eaststarter).Start();
-                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(2200);//xml传入
-                ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(2200);
-                ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(2020);
-                ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(2200, WestFireAction());
+               
+                ShowBusiness<EastShow<EastFactionModel>, EastFactionModel>.StarShow(2200);//xml传入事件
+                ShowBusiness<NorthShow<NorthFactionModel>, NorthFactionModel>.StarShow(2200);//xml传入事件
+                ShowBusiness<SouthShow<SouthFactionModel>, SouthFactionModel>.StarShow(2020);//xml传入事件
+                ShowBusiness<WestShow<WestFactionModel>, WestFactionModel>.StarShow(2200, WestFireAction());//程序内部注册
                 MyLog.OutputAndSaveTxt("");
                 MyLog.OutputAndSaveTxt("<<<<<<<<<<<<<<<<<<<<<<<<<<表演结束>>>>>>>>>>>>>>>>>>>>>>>>>");
-
                 
-                MyLog.SaveEnd();
                 Console.ReadKey();
 
             }
@@ -43,7 +37,10 @@ namespace SecondWorkMainProject
 
         }
            
-        
+        /// <summary>
+        /// 内部注册
+        /// </summary>
+        /// <returns></returns>
         static List<Action> WestFireAction()
         {
             return new List<Action>()

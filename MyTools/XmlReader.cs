@@ -20,8 +20,10 @@ namespace MyTools
             string fullPath = Path.Combine(TheBasePath, myxmlName);
             XmlDocument xmlRead=new XmlDocument();
             xmlRead.Load(fullPath);
-            XmlNodeList xmlNodeList = xmlRead.SelectSingleNode("ShowAction").ChildNodes;
-            List<Action> result= (from XmlNode list in xmlNodeList where list.Name == propertyName from XmlElement child in list.ChildNodes select (Action) (() => Console.WriteLine(child.InnerText))).ToList();
+            XmlNode selectSingleNode = xmlRead.SelectSingleNode("ShowAction");
+            if (selectSingleNode == null) return null;
+            XmlNodeList xmlNodeList = selectSingleNode.ChildNodes;
+            List<Action> result = (from XmlNode list in xmlNodeList where list.Name == propertyName from XmlElement child in list.ChildNodes select (Action)(() => Console.WriteLine(child.InnerText))).ToList();
             return result;
         }
 

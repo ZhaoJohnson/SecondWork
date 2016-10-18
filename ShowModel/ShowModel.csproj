@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="BasicModel.cs" />
     <Compile Include="EastFactionModel.cs" />
-    <Compile Include="OtherModel\EnumModel.cs" />
     <Compile Include="NorthFactionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SouthFactionModel.cs" />
